@@ -3,7 +3,7 @@ Kljub poplavi podobnih spletnih strani se je vaš prijatelj Vladko odločil, da 
 
 Vse svoje ideje je Vladko napisal na papirnato servieto, mnenja o tem ali so na teh servieti tudi ostanki Vladkovega kosila, pa ostajajo deljena. Servieta torej pravi:
 
-*Stran mora omogočati, da vprašanja postavimo tudi anonimno.
-*Odgovori morajo biti nekako točkovani (I like, +1), bolje točkovani odgovori se morajo prikazati višje.
-*Spraševalec lahko za posamezni odgovor označi ali je ta odgovor rešil njegov problem.
-*Vsako vprašanje in odgovor je možno komentirati.
+*   Stran mora omogočati, da vprašanja postavimo tudi anonimno.
+*   Odgovori morajo biti nekako točkovani (I like, +1), bolje točkovani odgovori se morajo prikazati višje.
+*   Spraševalec lahko za posamezni odgovor označi ali je ta odgovor rešil njegov problem.
+*   Vsako vprašanje in odgovor je možno komentirati.
