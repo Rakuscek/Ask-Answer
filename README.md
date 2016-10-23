@@ -1,4 +1,6 @@
 # Ask&Answer #
+
+##Vprašanja in odgovori##
 Kljub poplavi podobnih spletnih strani se je vaš prijatelj Vladko odločil, da svet potrebuje še eno spletno stran, kjer lahko ljudje postavijo vprašanja na katere jim drugi uporabniki spletne strani odgovarjajo. Seveda si je Vladko zadevo zamislil po svoje, ker pa nima pojma o spletnem programiranju, mu morate pri izvedbi pomagati vi.
 
 Vse svoje ideje je Vladko napisal na papirnato servieto, mnenja o tem ali so na teh servieti tudi ostanki Vladkovega kosila, pa ostajajo deljena. Servieta torej pravi:
