@@ -9,3 +9,6 @@ Vse svoje ideje je Vladko napisal na papirnato servieto, mnenja o tem ali so na 
 *   Odgovori morajo biti nekako točkovani (I like, +1), bolje točkovani odgovori se morajo prikazati višje.
 *   Spraševalec lahko za posamezni odgovor označi ali je ta odgovor rešil njegov problem.
 *   Vsako vprašanje in odgovor je možno komentirati.
+
+Ciljna publika aplikacije ni omejena na določeno podskupino ljudi, saj se bo na spletni strani lahko zastavljalo vprašanja z vseh področij.
+Aplikacija bo podpirala naprave vseh velikosti, saj bo zasnovana odzivno. Prilagajala se bo velikosti zaslona na katerem bo prikazana.
