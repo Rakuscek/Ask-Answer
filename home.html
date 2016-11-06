@@ -6,28 +6,57 @@
         <link rel="stylesheet" type="text/css" href="./scripts/style.css">
     </head>
     <body>
-        <header><img src="./data/logo.png" alt="A&A logo" style="width:360px;height:120px;"></header>
-        <div>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="tags.html">Tags</a></li>
-                <li>
-                    <form id="searchbox">
-                        <input id="search" type="search" placeholder="Search...">
-                        <input id="submit" type="submit" value="Search">
-                    </form>
-                </li>
-                <li style="float:right"><a href="signin.html">Sign in</a></li>
-                <li style="float:right"><a href="register.html">Register</a></li>
-                <li style="float:right"><a href="profile.html">Profile</a></li>
-            </ul>
-        </div>
-        <div id="leftColumn">
-            Hello I'm left.
-        </div>
-        <div id="rightColumn">
-            And I'm right.
-        </div>
-    </body>
+		<div id="all">
+			<header><img src="./data/logo.png" alt="A&A logo" style="width:360px; height:120px;"></header>
+			<div>
+				<ul>
+					<li><a href="home.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="tags.html">Tags</a></li>
+					<li>
+						<form id="searchbox">
+							<input id="search" type="search" placeholder="Search...">
+							<input id="submit" type="submit" value="Search">
+						</form>
+					</li>
+					<li style="float:right"><a href="login.html">Log in</a></li>
+					<li style="float:right"><a href="register.html">Register</a></li>
+					<li style="float:right"><a href="profile.html">Profile</a></li>
+				</ul>
+			</div>
+			<div id="mainContainer">
+				<div id="leftColumn">
+					Most popular questions
+					<br></br>
+					<div class="questionWithAnswer">
+						<div class="answeredIcon"><img src="./data/answered.png" alt="answered" style="width:50px; height:50px;"></div>
+						<div class="questionHome">
+							I have a pen, I have an apple. What do I have?
+						</div>
+						<div class="answerHome">
+							Apple-pen.
+						</div>
+						<div class"tags">Tags: fun, video</div>
+					</div>
+				</div>
+				<div id="rightColumn">
+					Latest questions
+					<br></br>
+					<div class="questionWithAnswer">
+						<div class="answeredIcon"><img src="./data/notAnswered.png" alt="answered" style="width:50px; height:50px;"></div>
+						<div class="questionHome">
+							I have a pen, I have pineapple. What do I have?
+						</div>
+						<div class="answerHome">
+							Pinapple-pen... I don't know.
+						</div>
+						<div class"tags">Tags: fun, video</div>
+					</div>
+				</div>
+			</div>
+			<footer id="footer">
+				Copyright by Erik Rakušček. All rights reserved.
+			</footer>
+		</div>
+	</body>
 </html>

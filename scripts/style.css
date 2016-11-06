@@ -1,3 +1,13 @@
+/* CSS file for style in home.html */
+
+#all {
+	max-width: 1000px;
+	min-width: 350px;
+	margin: auto auto;
+	padding: 0;
+}
+
+/* navigation bar */
 ul {
     list-style-type: none;
     margin: 0;
@@ -29,16 +39,71 @@ li a:hover {
     background-color: #8B0000;
 }
 
-#left {
-    float: left;
-    max-width: 160px;
-    margin: 0;
-    padding: 1em;
+/* main body of web page */
+#mainContainer {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	display: inline-block;
 }
 
-#right {
-    margin-left: 170px;
-    border-left: 1px solid gray;
-    padding: 1em;
-    overflow: hidden;
+#leftColumn {
+  display: inline-block;
+  width: 46%;
+  height: 100%;
+  padding: 15px;
+  background: lightgrey;
+  border: 2px solid;
+}
+
+#rightColumn {
+  display: inline-block;
+  width: 46%;
+  height: 100%;
+  padding: 15px;
+  background: lightgrey;
+  border: 2px solid;
+}
+
+.questionWithAnswer {
+	float: right;
+	width: 80%;
+	padding: 10px;
+	border: 1px solid;
+}
+
+.questionHome {
+	float: right;
+	width: 75%;
+	height: 100%;
+	padding: 10px;
+	background: #FF6347;
+	border: 1px solid;
+}
+
+.answerHome {
+	float: right;
+	width: 50%;
+	height: 100%;
+	padding: 10px;
+	background: lightblue;
+	border: 1px dashed;
+}
+
+.answeredIcon {
+	display: inline-block;
+	width: 50px;
+	visibility: visible;
+}
+
+.tags {
+	
+}
+
+/* footer of web page */
+#footer {
+	position: fixed;
+	padding: 10px;
+	bottom: 0;
+	background-color: #333;
+	color: white;
 }
