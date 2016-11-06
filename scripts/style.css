@@ -28,3 +28,17 @@ li a:hover {
     padding: 12.5px;
     background-color: #8B0000;
 }
+
+#left {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+#right {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
