@@ -80,12 +80,37 @@
 			
 			<div id="mainContainer">
 				<div id="leftColumn">
-					About section
+					Ask a question
 					<br></br>
 					<div class="questionWithAnswer">
-						<p>Web page Ask&Answer was made with one purpose and one purpose only, to help people with questions get their answers.</p>
-						<p>Here you can ask any question you want. There are no restrictions.</p>
-						<p>You can also answer any question already asked or you can upvote an answer, if someone already answered it before. That's how you will help the best answer come on top.</p>
+						<form>
+							Name:<br>
+							<input type="text" name="firstname"><br>
+							Question:<br>
+							<textarea class="textarea"></textarea>
+							Categories:<br>
+							<div style="overflow-x:auto;">
+								<table style="width:100%">
+									<tr>
+										<td><input type="checkbox" name="category" value="everyday">everyday</td>
+										<td><input type="checkbox" name="category" value="internet">internet</td>
+										<td><input type="checkbox" name="category" value="food">food</td>
+										<td><input type="checkbox" name="category" value="sport">sport</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" name="category" value="fashion">fashion</td>
+										<td><input type="checkbox" name="category" value="trend">trend</td>
+										<td><input type="checkbox" name="category" value="engineering">engineering</td>
+										<td><input type="checkbox" name="category" value="computer">computer</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" name="category" value="cars">cars</td>
+										<td><input type="checkbox" name="category" value="fun">fun</td>
+									</tr>
+								</table>
+							</div>
+							<input type="submit" value="Submit">
+						</form>
 					</div>
 				</div>
 				<div id="rightColumn">
