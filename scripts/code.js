@@ -7,9 +7,9 @@ function loginValidation(){
 
 	if(usernameL == "admin" && passwordL == "admin"){
 		loggedIn = true;
+		document.getElementById("profile").style.display = 'block';
 	}
 	
 	if(loggedIn == true){
-		document.getElementById('profile').style.display = 'block';
 	}
 }
