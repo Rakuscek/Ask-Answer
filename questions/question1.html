@@ -3,18 +3,18 @@
     <head>
         <meta charset="utf-8">
         <title>Ask&Answer</title>
-        <link rel="stylesheet" type="text/css" href="./scripts/style.css">
-		<script type="text/javascript" src="scripts/code.js"></script>
+        <link rel="stylesheet" type="text/css" href="../scripts/style.css">
+		<script type="text/javascript" src="../scripts/code.js"></script>
     </head>
     <body>
 		<div id="all">
-			<header><a href="home.html"><img src="./data/logo.png" alt="A&A logo" style="width:360px; height:120px;"></a></header>
+			<header><a href="../home.html"><img src="../data/logo.png" alt="A&A logo" style="width:360px; height:120px;"></a></header>
 			<div>
 				<ul class="navUL">
-					<li class="navLI"><a class="navLIA" href="home.html">Home</a></li>
-					<li class="navLI"><a class="navLIA" href="about.html">About</a></li>
-					<li class="navLI"><a class="navLIA" href="categories.html">Categories</a></li>
-					<li class="navLI" id="profile" style="display:none"><a class="navLIA" href="profile.html">Profile</a></li>
+					<li class="navLI"><a class="navLIA" href="../home.html">Home</a></li>
+					<li class="navLI"><a class="navLIA" href="../about.html">About</a></li>
+					<li class="navLI"><a class="navLIA" href="../categories.html">Categories</a></li>
+					<li class="navLI" id="profile" style="display:none"><a class="navLIA" href="../profile.html">Profile</a></li>
 					<li class="navLI">
 						<form id="searchbox">
 							<input id="search" type="search" placeholder="Search...">
@@ -31,7 +31,7 @@
 			  <form class="modal-content animate">
 				<div class="imgcontainer">
 				  <span onclick="document.getElementById('loginwindow').style.display='none'" class="close" title="Close Modal">&times;</span>
-				  <img src="data/loginpic.png" alt="Avatar" class="avatar">
+				  <img src="../data/loginpic.png" alt="Avatar" class="avatar">
 				</div>
 
 				<div class="container">
@@ -56,7 +56,7 @@
 			  <form class="modal-content animate">
 				<div class="imgcontainer">
 				  <span onclick="document.getElementById('registerwindow').style.display='none'" class="close" title="Close Modal">&times;</span>
-				  <img src="data/loginpic.png" alt="Avatar" class="avatar">
+				  <img src="../data/loginpic.png" alt="Avatar" class="avatar">
 				</div>
 
 				<div class="container">
@@ -83,35 +83,71 @@
 			
 			<div id="mainContainer">
 				<div id="leftColumn">
-					<p>About section</p>
+					<p><b>Question #1</b></p>
 					<div class="questionWithAnswer">
-						<p>Web page Ask&Answer was made with one purpose and one purpose only, to help people with questions get their answers.</p>
-						<p>Here you can ask any question you want. There are no restrictions.</p>
-						<p>You can also answer any question already asked or you can upvote an answer, if someone already answered it before. That's how you will help the best answer come on top.</p>
+						<p><b>I have a pen, I have an apple. What do I have?</b></p>
+						<div class="categories">Categories: fun, video</div>
+						<div class="user">Asked by: user1234</div>
+					</div>
+					<div class="answer">
+						<div class="votes">
+							<table id="votesTable">
+								<tr>
+									<td><input type="image" src="../data/upvote.png" alt="upvote" style="width:50px; height:30px"/></td>
+								</tr>
+								<tr>
+									<td><div id="averageVotes"><b>5</b></div></td>
+								</tr>
+								<tr>
+									<td><input type="image" src="../data/downvote.png" alt="downvote" style="width:50px; height:30px"/></td>
+								</tr>
+								<tr>
+									<div class="answeredIcon"><img src="../data/answered.png" alt="answered" style="width:50px; height:50px;"></div>
+								</tr>
+							</table>
+						</div>
+						<div class="answer">
+							<p>Apple-Pen.</p>
+						</div>
+						<div class="user">Answered by: user25234</div>
+					</div>
+					<div class="answer">
+						<div class="votes">
+							<table id="votesTable">
+								<tr>
+									<td><input type="image" src="../data/upvote.png" alt="upvote" style="width:50px; height:30px"/></td>
+								</tr>
+								<tr>
+									<td><div id="averageVotes"><b>-2</b></div></td>
+								</tr>
+								<tr>
+									<td><input type="image" src="../data/downvote.png" alt="downvote" style="width:50px; height:30px"/></td>
+								</tr>
+							</table>
+						</div>
+						<div class="answer">
+							<p>Pear-Pen.</p>
+						</div>
+						<div class="user">Answered by: user0423176</div>
+					</div>
+					<div class="answer">
+						<p>Answer the question</p>
+						Name:
+						<input type="text" name="firstname"><br>
+						Question:
+						<textarea class="textarea"></textarea>
+						<input type="submit" value="Submit" style="float: right;">
 					</div>
 				</div>
 				<div id="rightColumn">
-					<p>Latest questions</p>
-					<div class="questionWithAnswer">
-						<div class="answeredIcon"><img src="./data/notAnswered.png" alt="answered" style="width:50px; height:50px;"></div>
-						<div class="question">
-							I have a pen, I have pineapple. What do I have?
-							<br></br>
-							<div class="categories">Categories: fun, video</div>
-						</div>
-						<div class="answer">
-							Pinapple-pen... I don't know.
-						</div>
-					</div>
-					<div class="questionWithAnswer">
-						<div class="answeredIcon"><img src="./data/answered.png" alt="answered" style="width:50px; height:50px;"></div>
-						<div class="question">
-							I have a pen, I have an apple. What do I have?
-							<br></br>
-							<div class="categories">Categories: fun, video</div>
-						</div>
-						<div class="answer">
-							Apple-pen.
+						<p>Latest questions</p>
+						<div class="questionWithAnswer">
+							<p><a href="question2.html">Question #2</a></p>
+							<div class="answeredIcon"><img src="../data/notAnswered.png" alt="answered" style="width:50px; height:50px;"></div>
+							<div class="question">
+								<p><b>I have a pen, I have pineapple. What do I have?</b></p>
+								<div class="categories">Categories: fun, video</div>
+							</div>
 						</div>
 					</div>
 				</div>

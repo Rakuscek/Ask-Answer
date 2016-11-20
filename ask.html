@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title>Ask&Answer</title>
         <link rel="stylesheet" type="text/css" href="./scripts/style.css">
+		<script type="text/javascript" src="scripts/code.js"></script>
     </head>
     <body>
 		<div id="all">
@@ -13,18 +14,19 @@
 					<li class="navLI"><a class="navLIA" href="home.html">Home</a></li>
 					<li class="navLI"><a class="navLIA" href="about.html">About</a></li>
 					<li class="navLI"><a class="navLIA" href="categories.html">Categories</a></li>
-					<li class="navLI" style="float:left; visibility: hidden"><a class="navLIA" href="profile.html">Profile</a></li>
+					<li class="navLI" id="profile" style="display:none"><a class="navLIA" href="profile.html">Profile</a></li>
 					<li class="navLI">
 						<form id="searchbox">
 							<input id="search" type="search" placeholder="Search...">
 							<input id="submit" type="submit" value="Search">
 						</form>
 					</li>
-					<li class="navLI" style="float:right"><button class="navLIA" onclick="document.getElementById('loginwindow').style.display='block'">Log in</a></li>
-					<li class="navLI" style="float:right"><button class="navLIA" onclick="document.getElementById('registerwindow').style.display='block'">Register</a></li>
+					<li class="navLI" style="float:right"><button class="navLIA logRegBtn" onclick="document.getElementById('loginwindow').style.display='block'">Log in</button></li>
+					<li class="navLI" style="float:right"><button class="navLIA logRegBtn" onclick="document.getElementById('registerwindow').style.display='block'">Register</button></li>
 				</ul>
 			</div>
 			
+			<!-- LOGIN -->
 			<div id="loginwindow" class="modal">
 			  <form class="modal-content animate">
 				<div class="imgcontainer">
@@ -34,12 +36,12 @@
 
 				<div class="container">
 				  <label><b>Username</b></label>
-				  <input type="text" placeholder="Enter Username" name="uname" required>
+				  <input type="text" placeholder="Enter Username" id="usernameLogin" required>
 
 				  <label><b>Password</b></label>
-				  <input type="password" placeholder="Enter Password" name="psw" required>
+				  <input type="password" placeholder="Enter Password" id="passwordLogin" required>
 					
-				  <button type="submit" class="acceptbtn">Login</button>
+				  <button type="submit" class="acceptbtn" onclick="loginValidation()">Login</button>
 				  <input type="checkbox" checked="checked"> Remember me
 				</div>
 
@@ -49,6 +51,7 @@
 			  </form>
 			</div>
 			
+			<!-- REGISTER -->
 			<div id="registerwindow" class="modal">
 			  <form class="modal-content animate">
 				<div class="imgcontainer">
@@ -58,16 +61,16 @@
 
 				<div class="container">
 				  <label><b>Username</b></label>
-				  <input type="text" placeholder="Enter Username" name="uname" required>
+				  <input type="text" placeholder="Enter Username" id="usernameRegister" required>
 				  
 				  <label><b>E-mail</b></label>
-				  <input type="text" placeholder="Enter E-mail" name="email" required>
+				  <input type="text" placeholder="Enter E-mail" id="email" required>
 
 				  <label><b>Password</b></label>
-				  <input type="password" placeholder="Enter Password" name="psw1" required>
+				  <input type="password" placeholder="Enter Password" id="passwordRegister1" required>
 				  
 				  <label><b>Repeat Password</b></label>
-				  <input type="password" placeholder="Enter Password Again" name="psw2" required>
+				  <input type="password" placeholder="Enter Password Again" id="passwordRegister2" required>
 					
 				  <button type="submit" class="acceptbtn">Register</button>
 				</div>
@@ -80,8 +83,7 @@
 			
 			<div id="mainContainer">
 				<div id="leftColumn">
-					Ask a question
-					<br></br>
+					<p>Ask a question</p>
 					<div class="questionWithAnswer">
 						<form>
 							Name:<br>
@@ -114,13 +116,12 @@
 					</div>
 				</div>
 				<div id="rightColumn">
-					Latest questions
-					<br></br>
+					<p>Latest questions</p>
 					<div class="questionWithAnswer">
 						<div class="answeredIcon"><img src="./data/notAnswered.png" alt="answered" style="width:50px; height:50px;"></div>
 						<div class="question">
 							I have a pen, I have pineapple. What do I have?
-							<br></br>
+							<br>
 							<div class="categories">Categories: fun, video</div>
 						</div>
 						<div class="answer">
@@ -131,7 +132,7 @@
 						<div class="answeredIcon"><img src="./data/answered.png" alt="answered" style="width:50px; height:50px;"></div>
 						<div class="question">
 							I have a pen, I have an apple. What do I have?
-							<br></br>
+							<br>
 							<div class="categories">Categories: fun, video</div>
 						</div>
 						<div class="answer">
