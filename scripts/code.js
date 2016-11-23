@@ -1,4 +1,4 @@
-var loggedIn = false;;
+var loggedIn = false;
 
 //Login window validation
 function loginValidation(){
@@ -8,8 +8,6 @@ function loginValidation(){
 	if(usernameL == "admin" && passwordL == "admin"){
 		loggedIn = true;
 		document.getElementById("profile").style.display = 'block';
-	}
-	
-	if(loggedIn == true){
+		document.querySelector('.leftColumn').style.background = 'red';
 	}
 }

@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Ask&Answer</title>
         <link rel="stylesheet" type="text/css" href="./scripts/style.css">
 		<script type="text/javascript" src="scripts/code.js"></script>
@@ -14,15 +15,15 @@
 					<li class="navLI"><a class="navLIA" href="home.html">Home</a></li>
 					<li class="navLI"><a class="navLIA" href="about.html">About</a></li>
 					<li class="navLI"><a class="navLIA" href="categories.html">Categories</a></li>
-					<li class="navLI" id="profile" style="display:none"><a class="navLIA" href="profile.html">Profile</a></li>
+					<div id="profile"><li class="navLI"><a class="navLIA" href="profile.html">Profile</a></li></div>
 					<li class="navLI">
 						<form id="searchbox">
 							<input id="search" type="search" placeholder="Search...">
 							<input id="submit" type="submit" value="Search">
 						</form>
 					</li>
-					<li class="navLI" style="float:right"><button class="navLIA logRegBtn" onclick="document.getElementById('loginwindow').style.display='block'">Log in</button></li>
-					<li class="navLI" style="float:right"><button class="navLIA logRegBtn" onclick="document.getElementById('registerwindow').style.display='block'">Register</button></li>
+					<li class="navLI-right"><button class="navLIA logRegBtn" onclick="document.getElementById('loginwindow').style.display='block'">Log in</button></li>
+					<li class="navLI-right"><button class="navLIA logRegBtn" onclick="document.getElementById('registerwindow').style.display='block'">Register</button></li>
 				</ul>
 			</div>
 			
@@ -97,6 +98,7 @@
 							<li><a href="./categories/computer.html">computer</a></li>
 							<li><a href="./categories/cars.html">cars</a></li>
 							<li><a href="./categories/fun.html">fun</a></li>
+							<li><a href="./categories/other.html">other</a></li>
 						</ul>
 					</div>
 				</div>

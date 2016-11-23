@@ -7,7 +7,7 @@
 	padding: 0;
 }
 
-/* navigation bar */
+/*============ navigation bar ============*/
 ul.navUL {
     list-style-type: none;
     margin: 0;
@@ -16,11 +16,15 @@ ul.navUL {
     background-color: #333;
 }
 
-li.navLI {
+ul.navUL li {
     float: left;
 }
 
-li a.navLIA {
+ul.navUL li.navLI-right {
+	float: right;
+}
+
+ul.navUL li a {
     display: block;
     color: white;
     text-align: center;
@@ -29,14 +33,16 @@ li a.navLIA {
 }
 
 /* Change the link color to #8B0000 (Dark red) on hover */
-li a:hover {
+ul.navUL li a:hover {
     background-color: #8B0000;
 }
+/*========================================*/
 
 /* search bar */
 #searchbox {
     padding: 12.5px;
     background-color: #8B0000;
+	text-align: center;
 }
 
 /* main body of web page */
@@ -44,6 +50,15 @@ li a:hover {
 	padding-top: 20px;
 	padding-bottom: 20px;
 	display: inline-block;
+}
+
+/* footer of web page */
+#footer {
+	position: fixed;
+	padding: 10px;
+	bottom: 0;
+	background-color: #333;
+	color: white;
 }
 
 #leftColumn {
@@ -100,6 +115,10 @@ li a:hover {
 	height: 100%;
 }
 
+#profile {
+    display: none;
+}
+
 #votesTable {
 	text-align: center;
 	vertical-align: middle;
@@ -114,7 +133,7 @@ li a:hover {
 }
 
 .askbtn {
-    background-color: #333;
+    background-color: #8B0000;
     color: white;
     padding: 14px 16px;
     width: 100%;
@@ -131,15 +150,6 @@ li a:hover {
 	resize: none;
 }
 
-/* footer of web page */
-#footer {
-	position: fixed;
-	padding: 10px;
-	bottom: 0;
-	background-color: #333;
-	color: white;
-}
-
 /* LOGIN/REGISTER WINDOW */
 /* Full-width input fields */
 input[type=text], input[type=password] {
@@ -153,11 +163,15 @@ input[type=text], input[type=password] {
 
 /* Set a style for all buttons */
 .logRegBtn {
-    background-color: #8B0000;
+    background-color: #333;
     color: white;
     padding: 14px 16px;
     cursor: pointer;
     width: 100%;
+}
+
+.logRegBtn:hover {
+    background-color: #8B0000;
 }
 
 /* Extra styles for the cancel button */
@@ -202,15 +216,14 @@ img.avatar {
     width: 100%;
     height: 100%;
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    padding-top: 60px;
+    background-color: rgba(0,0,0,0.4); /* Black with opacity */
+    padding-top: 20px;
 }
 
 /* Modal Content/Box */
 .modal-content {
     background-color: #fefefe;
-    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    margin: 3% auto 20% auto; /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid gray;
 	max-width: 750px;
     width: 80%; /* Could be more or less, depending on screen size */
@@ -229,4 +242,28 @@ img.avatar {
 .close:hover {
     color: red;
     cursor: pointer;
+}
+
+@media screen and (max-width: 1020px) {
+	#leftColumn {
+		width: 97%;
+	}
+	#rightColumn {
+		margin: 3% auto 10% auto;
+		width: 97%;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	#leftColumn {
+		width: 97%;
+	}
+	#rightColumn {
+		margin: 3% auto 10% auto;
+		width: 97%;
+	}
+	ul.navUL li.navLI-right,
+	ul.navUL li {
+		float: none;
+	}
 }

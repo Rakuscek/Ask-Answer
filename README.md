@@ -11,5 +11,5 @@ Vse svoje ideje je Vladko napisal na papirnato servieto, mnenja o tem ali so na 
 *   Vsako vprašanje in odgovor je možno komentirati.
 
 Ciljna publika aplikacije ni omejena na določeno podskupino ljudi, saj se bo na spletni strani lahko zastavljalo vprašanja z vseh področij.
-Aplikacija bo podpirala naprave vseh velikosti, saj bo zasnovana odzivno. Prilagajala se bo velikosti zaslona na katerem bo prikazana.
+Aplikacija bo podpirala naprave vseh velikosti, saj bo zasnovana odzivno (*responsive design*). Prilagajala se bo velikosti zaslona na katerem bo prikazana.
 Za spletno stran sem si izbral hierarhično organizacijo. To sem izbral, ker je najbloj pregledna in lahka za uporabo. Ta organizacija spletne strani upošteva principa "sedmih povezav" in "treh klikov".
