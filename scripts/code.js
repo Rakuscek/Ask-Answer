@@ -7,7 +7,5 @@ function loginValidation(){
 
 	if(usernameL == "admin" && passwordL == "admin"){
 		loggedIn = true;
-		document.getElementById("profile").style.display = 'block';
-		document.querySelector('.leftColumn').style.background = 'red';
 	}
 }
