@@ -1,0 +1,7 @@
+/* CSS file for style in categories.html */
+
+.textarea {
+	width: 99%;
+	min-height: 100px;
+	resize: none;
+}
