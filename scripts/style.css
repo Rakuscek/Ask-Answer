@@ -60,10 +60,10 @@ ul.navUL li a:hover {
 }
 
 /* footer of web page */
-#footer {
-	position: fixed;
+footer {
+    position: fixed;
+    bottom: 0;
 	padding: 10px;
-	bottom: 0;
 	background-color: #333;
 	color: white;
 }
