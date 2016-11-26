@@ -1,7 +1,8 @@
 /* CSS file for style in home.html */
 
 .askbtnbar {
-	padding: 15px;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 
 .askbtn {
