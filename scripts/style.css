@@ -73,7 +73,6 @@ ul.navUL li a:hover {
   width: 61%;
   height: 100%;
   padding: 12px;
-  border: 2px solid #333;
 }
 
 #rightColumn {
@@ -81,7 +80,6 @@ ul.navUL li a:hover {
   width: 33%;
   height: 100%;
   padding: 12px;
-  border: 2px solid #333;
 }
 
 .questionWithAnswer {
