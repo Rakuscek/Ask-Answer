@@ -45,6 +45,13 @@ ul.navUL li a:hover {
 	text-align: center;
 }
 
+#searchbox input[type=submit] {
+    background-color: #333;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
 /* main body of web page */
 #mainContainer {
 	padding-top: 20px;
@@ -146,6 +153,10 @@ input[type=text], input[type=password] {
 
 .logRegBtn:hover {
     background-color: #8B0000;
+}
+
+.avatar {
+	border: 1px dashed;
 }
 
 /* Extra styles for the cancel button */

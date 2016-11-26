@@ -1,7 +1,21 @@
-/* CSS file for style in categories.html */
+/* CSS file for style in ask.html */
 
 .textarea {
 	width: 99%;
 	min-height: 100px;
 	resize: none;
+}
+
+.questionWithAnswer input[type=submit] {
+	width: 100%;
+    background-color: #333;
+    color: white;
+    border-radius: 10px;
+	padding: 14px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+}
+
+.questionWithAnswer input[type=submit]:hover {
+    background-color: #8B0000;
 }
