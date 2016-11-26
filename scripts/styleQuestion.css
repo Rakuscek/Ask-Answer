@@ -4,7 +4,7 @@
 	float: right;
 }
 
-#votesTable {
+.votesTable {
 	text-align: center;
 	vertical-align: middle;
 }
