@@ -12,9 +12,12 @@
 	text-decoration: none;	
 }
 
+.askbtn:link {
+	color: white;
+}
+
 .askbtn:visited {
 	color: white;
-	background-color: #8B0000;
 }
 
 .askbtn:hover {

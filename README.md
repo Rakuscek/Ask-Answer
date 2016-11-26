@@ -10,6 +10,11 @@ Vse svoje ideje je Vladko napisal na papirnato servieto, mnenja o tem ali so na 
 *   Spraševalec lahko za posamezni odgovor označi ali je ta odgovor rešil njegov problem.
 *   Vsako vprašanje in odgovor je možno komentirati.
 
+##Ciljna publika in naprave##
 Ciljna publika aplikacije ni omejena na določeno podskupino ljudi, saj se bo na spletni strani lahko zastavljalo vprašanja z vseh področij.
 Aplikacija bo podpirala naprave vseh velikosti, saj bo zasnovana odzivno (*responsive design*). Prilagajala se bo velikosti zaslona na katerem bo prikazana.
+
+##Delovanje##
 Za spletno stran sem si izbral hierarhično organizacijo. To sem izbral, ker je najbloj pregledna in lahka za uporabo. Ta organizacija spletne strani upošteva principa "sedmih povezav" in "treh klikov".
+Aplikacija deluje enako dobro v najnovejših verzijah brskalnikov Chrome, Microsoft Edge in Opera (v katerih sem aplikacijo testiral).
+Poseben trud je bil vložen v izgradnjo oken za vpis in registracijo, ki delujeta zgolj z uporabo HTML in CSS.
