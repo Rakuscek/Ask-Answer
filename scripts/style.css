@@ -3,10 +3,9 @@
 /* body of web page */
 body {
 	max-width: 1000px;
-	min-width: 350px;
+	min-width: 300px;
 	margin: auto auto;
 	padding: 0;
-	height: 100%;
 	display: flex;
 	flex-flow: column;
 	min-height: 100vh;
@@ -75,16 +74,16 @@ ul.navUL li a:hover {
 
 #leftColumn {
   display: inline-block;
-  width: 60%;
+  width: 61%;
   height: 100%;
-  padding: 10px;
+  padding: 12px;
 }
 
 #rightColumn {
   display: inline-block;
   width: 33%;
   height: 100%;
-  padding: 10px;
+  padding: 12px;
 }
 
 .questionWithAnswer {
