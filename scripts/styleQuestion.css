@@ -1,7 +1,11 @@
 /* CSS file for style in question#.html */
 
-.user {
+.user-time {
 	float: right;
+}
+
+.user {
+	text-decoration: underline;
 }
 
 .votesTable {
