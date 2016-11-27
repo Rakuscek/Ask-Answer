@@ -75,16 +75,16 @@ ul.navUL li a:hover {
 
 #leftColumn {
   display: inline-block;
-  width: 61%;
+  width: 60%;
   height: 100%;
-  padding: 12px;
+  padding: 10px;
 }
 
 #rightColumn {
   display: inline-block;
   width: 33%;
   height: 100%;
-  padding: 12px;
+  padding: 10px;
 }
 
 .questionWithAnswer {
