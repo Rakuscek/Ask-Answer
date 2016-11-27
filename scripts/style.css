@@ -83,6 +83,11 @@ ul.navUL li a:hover {
   padding: 3px;
 }
 
+.questionTitle {
+    color: #8B0000;
+    font-size: 20px;
+}
+
 .questionWithAnswer {
 	float: right;
 	width: 90%;
@@ -105,7 +110,7 @@ ul.navUL li a:hover {
 	width: 70%;
 	height: 100%;
 	padding: 5px;
-	margin: 10px;
+	margin: 5px;
 	border: 1px solid #333;
 	background: lightgrey;
 }
