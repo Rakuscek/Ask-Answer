@@ -1,10 +1,23 @@
 /* general CSS file */
 
-#all {
+/* body of web page */
+body {
 	max-width: 1000px;
 	min-width: 350px;
 	margin: auto auto;
 	padding: 0;
+	height: 100%;
+	display: flex;
+	flex-flow: column;
+	min-height: 100vh;
+}
+
+/* footer of web page */
+footer {
+    bottom: 0;
+	padding: 10px;
+	background-color: #333;
+	color: white;
 }
 
 /*============ navigation bar ============*/
@@ -57,15 +70,7 @@ ul.navUL li a:hover {
 	padding-top: 10px;
 	padding-bottom: 20px;
 	display: inline-block;
-}
-
-/* footer of web page */
-footer {
-    position: fixed;
-    bottom: 0;
-	padding: 10px;
-	background-color: #333;
-	color: white;
+	flex-grow: 1;
 }
 
 #leftColumn {
@@ -129,7 +134,7 @@ a:visited {
 	text-decoration: none;
 }
 
-/* LOGIN/REGISTER WINDOW */
+/*============ LOGIN/REGISTER WINDOW ============*/
 /* Full-width input fields */
 input[type=text], input[type=password] {
     width: 100%;
@@ -226,8 +231,9 @@ img.avatar {
     color: red;
     cursor: pointer;
 }
+/*===============================================*/
 
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 900px) {
 	#leftColumn {
 		width: 97%;
 	}
@@ -237,7 +243,7 @@ img.avatar {
 	}
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 680px) {
 	#leftColumn {
 		width: 97%;
 	}

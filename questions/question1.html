@@ -9,8 +9,8 @@
 		<script type="text/javascript" src="../scripts/code.js"></script>
     </head>
     <body>
-		<div id="all">
-			<header><a href="../home.html"><img src="../data/logo.png" alt="A&A logo" style="width:360px; height:120px;"></a></header>
+		<header>
+			<a href="../home.html"><img src="../data/logo.png" alt="A&A logo" style="width:360px; height:120px;"></a>
 			<div>
 				<ul class="navUL">
 					<li class="navLI"><a class="navLIA" href="../home.html">Home</a></li>
@@ -26,144 +26,144 @@
 					<li class="navLI-right"><button class="navLIA logRegBtn" onclick="document.getElementById('registerwindow').style.display='block'">Register</button></li>
 				</ul>
 			</div>
-			
-			<!-- LOGIN -->
-			<div id="loginwindow" class="modal">
-				<form class="modal-content">
-					<div class="imgcontainer">
-						<span onclick="document.getElementById('loginwindow').style.display='none'" class="close" title="Close Modal">&times;</span>
-						<img src="../data/loginpic.png" alt="Avatar" class="avatar">
-					</div>
-					<div class="container">
-						<label><b>Username</b></label>
-						<input type="text" placeholder="Enter Username" id="usernameLogin" required>
+		</header>
+		
+		<!-- LOGIN -->
+		<div id="loginwindow" class="modal">
+			<form class="modal-content">
+				<div class="imgcontainer">
+					<span onclick="document.getElementById('loginwindow').style.display='none'" class="close" title="Close Modal">&times;</span>
+					<img src="../data/loginpic.png" alt="Avatar" class="avatar">
+				</div>
+				<div class="container">
+					<label><b>Username</b></label>
+					<input type="text" placeholder="Enter Username" id="usernameLogin" required>
 
-						<label><b>Password</b></label>
-						<input type="password" placeholder="Enter Password" id="passwordLogin" required>
-					
-						<button type="submit" class="acceptbtn" onclick="loginValidation()">Login</button>
-						<input type="checkbox" checked="checked"> Remember me
-					</div>
-					<div class="container" style="background-color:#f1f1f1">
-						<button type="button" onclick="document.getElementById('loginwindow').style.display='none'" class="cancelbtn">Cancel</button>
-					</div>
-				</form>
-			</div>
-			
-			<!-- REGISTER -->
-			<div id="registerwindow" class="modal">
-				<form class="modal-content">
-					<div class="imgcontainer">
-						<span onclick="document.getElementById('registerwindow').style.display='none'" class="close" title="Close Modal">&times;</span>
-						<img src="../data/loginpic.png" alt="Avatar" class="avatar">
-					</div>
-					<div class="container">
-						<label><b>Username</b></label>
-						<input type="text" placeholder="Enter Username" id="usernameRegister" required>
-			
-						<label><b>E-mail</b></label>
-						<input type="text" placeholder="Enter E-mail" id="email" required>
+					<label><b>Password</b></label>
+					<input type="password" placeholder="Enter Password" id="passwordLogin" required>
+				
+					<button type="submit" class="acceptbtn" onclick="loginValidation()">Login</button>
+					<input type="checkbox" checked="checked"> Remember me
+				</div>
+				<div class="container" style="background-color:#f1f1f1">
+					<button type="button" onclick="document.getElementById('loginwindow').style.display='none'" class="cancelbtn">Cancel</button>
+				</div>
+			</form>
+		</div>
+		
+		<!-- REGISTER -->
+		<div id="registerwindow" class="modal">
+			<form class="modal-content">
+				<div class="imgcontainer">
+					<span onclick="document.getElementById('registerwindow').style.display='none'" class="close" title="Close Modal">&times;</span>
+					<img src="../data/loginpic.png" alt="Avatar" class="avatar">
+				</div>
+				<div class="container">
+					<label><b>Username</b></label>
+					<input type="text" placeholder="Enter Username" id="usernameRegister" required>
+		
+					<label><b>E-mail</b></label>
+					<input type="text" placeholder="Enter E-mail" id="email" required>
 
-						<label><b>Password</b></label>
-						<input type="password" placeholder="Enter Password" id="passwordRegister1" required>
-						  
-						<label><b>Repeat Password</b></label>
-						<input type="password" placeholder="Enter Password Again" id="passwordRegister2" required>
-						
-						<button type="submit" class="acceptbtn" onclick="registrationValidation()">Register</button>
-					</div>
-					<div class="container" style="background-color:#f1f1f1">
-						<button type="button" onclick="document.getElementById('registerwindow').style.display='none'" class="cancelbtn">Cancel</button>
-					</div>
-				</form>
-			</div>
-			
-			<div id="mainContainer">
-				<div id="leftColumn">
-					<h2><p>Question #1</p></h2>
+					<label><b>Password</b></label>
+					<input type="password" placeholder="Enter Password" id="passwordRegister1" required>
+					  
+					<label><b>Repeat Password</b></label>
+					<input type="password" placeholder="Enter Password Again" id="passwordRegister2" required>
 					
-					<!-- question asked -->
-					<div class="questionWithAnswer">
-						<p><b>I have a pen, I have an apple. What do I have?</b></p>
-						<div class="categories">Categories: <a href="">fun</a>, <a href="">video</a></div>
-						<div class="user">Asked by: user1234</div>
-					</div>
-					
-					<!-- 1st answer by votes or best answer -->
-					<div class="answer">
-						<div class="votes">
-							<table class="votesTable">
-								<tr>
-									<td><input type="image" src="../data/upvote.png" alt="upvote" style="width:50px; height:30px"/></td>
-								</tr>
-								<tr>
-									<td><div id="averageVotes1"><b>5</b></div></td>
-								</tr>
-								<tr>
-									<td><input type="image" src="../data/downvote.png" alt="downvote" style="width:50px; height:30px"/></td>
-								</tr>
-								<tr>
-									<td><div class="answeredIcon"><img src="../data/answered.png" alt="answered" style="width:50px; height:50px;"></div></td>
-								</tr>
-							</table>
-						</div>
-						<div class="answer">
-							<p>Apple-Pen.</p>
-						</div>
-						<div class="user">Answered by: user25234</div>
-					</div>
-					
-					<!-- 2nd answer by votes -->
-					<div class="answer">
-						<div class="votes">
-							<table class="votesTable">
-								<tr>
-									<td><input type="image" src="../data/upvote.png" alt="upvote" style="width:50px; height:30px"/></td>
-								</tr>
-								<tr>
-									<td><div id="averageVotes2"><b>-2</b></div></td>
-								</tr>
-								<tr>
-									<td><input type="image" src="../data/downvote.png" alt="downvote" style="width:50px; height:30px"/></td>
-								</tr>
-							</table>
-						</div>
-						<div class="answer">
-							<p>Pear-Pen.</p>
-						</div>
-						<div class="user">Answered by: user0423176</div>
-					</div>
-					
-					<!-- Answer the question -->
-					<div class="answer">
-						<p>Answer the question</p>
-						Name:
-						<input type="text" name="firstname"><br>
-						Answer:
-						<textarea class="textarea"></textarea>
-						<input type="submit" value="Answer" style="float: right;">
-					</div>
-					
+					<button type="submit" class="acceptbtn" onclick="registrationValidation()">Register</button>
+				</div>
+				<div class="container" style="background-color:#f1f1f1">
+					<button type="button" onclick="document.getElementById('registerwindow').style.display='none'" class="cancelbtn">Cancel</button>
+				</div>
+			</form>
+		</div>
+		
+		<div id="mainContainer">
+			<div id="leftColumn">
+				<h2><p>Question #1</p></h2>
+				
+				<!-- question asked -->
+				<div class="questionWithAnswer">
+					<p><b>I have a pen, I have an apple. What do I have?</b></p>
+					<div class="categories">Categories: <a href="">fun</a>, <a href="">video</a></div>
+					<div class="user">Asked by: user1234</div>
 				</div>
 				
-				<div id="rightColumn">
-					<h3><p>Latest questions</p></h3>
-					
-					<!-- 1st question by time -->
-					<div class="questionWithAnswer">
-						<p><a href="question2.html">Question #2</a></p>
-						<div class="answeredIcon"><img src="../data/notAnswered.png" alt="notAnswered" style="width:50px; height:50px;"></div>
-						<div class="question">
-								<b>I have a pen, I have pineapple. What do I have?</b>
-							<div class="categories">Categories: <a href="">fun</a>, <a href="">video</a></div>
-						</div>
+				<!-- 1st answer by votes or best answer -->
+				<div class="answer">
+					<div class="votes">
+						<table class="votesTable">
+							<tr>
+								<td><input type="image" src="../data/upvote.png" alt="upvote" style="width:50px; height:30px"/></td>
+							</tr>
+							<tr>
+								<td><div id="averageVotes1"><b>5</b></div></td>
+							</tr>
+							<tr>
+								<td><input type="image" src="../data/downvote.png" alt="downvote" style="width:50px; height:30px"/></td>
+							</tr>
+							<tr>
+								<td><div class="answeredIcon"><img src="../data/answered.png" alt="answered" style="width:50px; height:50px;"></div></td>
+							</tr>
+						</table>
 					</div>
-					
+					<div class="answer">
+						<p>Apple-Pen.</p>
+					</div>
+					<div class="user">Answered by: user25234</div>
 				</div>
+				
+				<!-- 2nd answer by votes -->
+				<div class="answer">
+					<div class="votes">
+						<table class="votesTable">
+							<tr>
+								<td><input type="image" src="../data/upvote.png" alt="upvote" style="width:50px; height:30px"/></td>
+							</tr>
+							<tr>
+								<td><div id="averageVotes2"><b>-2</b></div></td>
+							</tr>
+							<tr>
+								<td><input type="image" src="../data/downvote.png" alt="downvote" style="width:50px; height:30px"/></td>
+							</tr>
+						</table>
+					</div>
+					<div class="answer">
+						<p>Pear-Pen.</p>
+					</div>
+					<div class="user">Answered by: user0423176</div>
+				</div>
+				
+				<!-- Answer the question -->
+				<div class="answer">
+					<p>Answer the question</p>
+					Name:
+					<input type="text" name="firstname"><br>
+					Answer:
+					<textarea class="textarea"></textarea>
+					<input type="submit" value="Answer" style="float: right;">
+				</div>
+				
 			</div>
-			<footer>
-				Copyright by Erik Rakušček. All rights reserved.
-			</footer>
+			
+			<div id="rightColumn">
+				<h3><p>Latest questions</p></h3>
+				
+				<!-- 1st question by time -->
+				<div class="questionWithAnswer">
+					<p><a href="question2.html">Question #2</a></p>
+					<div class="answeredIcon"><img src="../data/notAnswered.png" alt="notAnswered" style="width:50px; height:50px;"></div>
+					<div class="question">
+							<b>I have a pen, I have pineapple. What do I have?</b>
+						<div class="categories">Categories: <a href="">fun</a>, <a href="">video</a></div>
+					</div>
+				</div>
+				
+			</div>
 		</div>
+		<footer>
+			Copyright by Erik Rakušček. All rights reserved.
+		</footer>
 	</body>
 </html>
