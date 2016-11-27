@@ -3,12 +3,12 @@
 /* body of web page */
 body {
 	max-width: 1000px;
-	min-width: 300px;
 	margin: auto auto;
 	padding: 0;
 	display: flex;
 	flex-flow: column;
 	min-height: 100vh;
+	overflow-x: hidden;
 }
 
 /* footer of web page */
