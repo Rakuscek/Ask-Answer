@@ -18,3 +18,4 @@ Aplikacija bo podpirala naprave vseh velikosti, saj bo zasnovana odzivno (*respo
 Za spletno stran sem si izbral hierarhično organizacijo. To sem izbral, ker je najbloj pregledna in lahka za uporabo. Ta organizacija spletne strani upošteva principa "sedmih povezav" in "treh klikov".
 Aplikacija deluje enako dobro v najnovejših verzijah brskalnikov Chrome, Firefox, Microsoft Edge in Opera (v katerih sem aplikacijo testiral).
 Poseben trud je bil vložen v izgradnjo oken za vpis in registracijo, ki delujeta zgolj z uporabo HTML in CSS.
+Javascript sem uporabil samo pri preverjanju veljavnosti e-maila in gesel pri registraciji.
