@@ -19,3 +19,6 @@ Za spletno stran sem si izbral hierarhično organizacijo. To sem izbral, ker je 
 Aplikacija deluje enako dobro v najnovejših verzijah brskalnikov Chrome, Firefox, Microsoft Edge in Opera (v katerih sem aplikacijo testiral).
 Poseben trud je bil vložen v izgradnjo oken za vpis in registracijo, ki delujeta zgolj z uporabo HTML in CSS.
 Javascript sem uporabil samo pri preverjanju veljavnosti e-maila in gesel pri registraciji.
+
+##Back-End##
+Za izvajanje na strani strežnika bom uporabil Django in python programski jezik.
