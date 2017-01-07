@@ -2,6 +2,9 @@
 import os
 import sys
 
+#superuser: username: erik
+#           password: erik1234
+
 if __name__ == "__main__":
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "AskAnswer.settings")
     try:

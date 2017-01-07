@@ -9,14 +9,18 @@ class Question(models.Model):
     questionID = models.IntegerField(primary_key=True)
     title = models.CharField(max_length=200)
     body = models.CharField(max_length=1000)
-    plusVotes = models.IntegerField(default=0)
-    minusVotes = models.IntegerField(default=0)
     time = models.DateTimeField(default=datetime.now)
     categories = models.CharField(max_length=500)
+    answered = models.IntegerField(default=0)
     username = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+
+    def __str__(self):
+        return self.title + ' - ' + str(self.username)
 
 class Answer(models.Model):
     body = models.CharField(max_length=1000)
     time = models.DateTimeField(default=datetime.now)
+    plusVotes = models.IntegerField(default=0)
+    minusVotes = models.IntegerField(default=0)
     username = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     questionID = models.ForeignKey(Question, on_delete=models.CASCADE)
