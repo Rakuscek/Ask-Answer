@@ -1,0 +1,40 @@
+/* CSS file for style in question#.html */
+
+.user-time {
+	float: right;
+}
+
+.user {
+	text-decoration: underline;
+	font-style: italic;
+}
+
+.votesTable {
+	text-align: center;
+}
+
+.votes {
+	display: inline-block;
+	min-width: 20px;
+	height: 100%;
+}
+
+.textarea {
+	width: 99%;
+	min-height: 100px;
+	resize: none;
+}
+
+.answer input[type=submit] {
+	width: 100%;
+    background-color: #333;
+    color: white;
+    border-radius: 10px;
+	padding: 14px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+}
+
+.answer input[type=submit]:hover {
+    background-color: #8B0000;
+}
