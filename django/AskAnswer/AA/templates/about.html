@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block left_column %}
+	<h2><p>About the website</p></h2>
+    <div class="questionWithAnswer">
+        <p>Web page Ask&Answer was made with one purpose and one purpose only, to help people with questions get their answers.</p>
+        <p>Here you can ask any question you want. There are no restrictions.</p>
+        <p>You can also answer any question already asked or you can upvote an answer, if someone already answered it before you. That's how you will help the best answer come on top.</p>
+    </div>
+{% endblock %}
+
+{% block right_column %}
+	<h3><p>Latest questions</p></h3>
+		{% if all_questions_time %}
+			{% for question in all_questions_time %}
+				<!-- questions by time -->
+				<div class="questionWithAnswer">
+					<p><a href="{% url 'question' question.questionID %}"><span class="questionTitle">{{ question.title }}</span></a></p>
+					{% if question.answered == 1 %}
+						<div class="answeredIcon"><img src="{% static 'answered.png' %}" alt="answered" style="width:50px; height:50px;"></div>
+					{% endif %}
+					<div class="question">
+						<b>{{ question.body }}</b>
+						<div class="categories">Categories: {{ question.categories }}</div>
+					</div>
+
+				</div>
+			{% endfor %}
+		{% else %}
+			<h3>No questions yet in the database.</h3>
+		{% endif %}
+	</div>
+{% endblock %}

@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block left_column %}
+    <h2><p>Categories</p></h2>
+    <div class="questionWithAnswer">
+        <table style="width:100%; overflow-x:auto;">
+            <tr>
+                <td>
+                    <div class="certainCategory">
+                        <p><a href=""><img src="{% static 'categories/everyday.jpg' %}" alt="everyday" style="width:100px; height:100px;"></a></p>
+                        <a href="">everyday</a>
+                    </div>
+                </td>
+                <td>
+                    <div class="certainCategory">
+                        <p><a href=""><img src="{% static 'categories/video.png' %}" alt="video" style="width:100px; height:100px;"></a></p>
+                        <a href="">video</a>
+                    </div>
+                </td>
+                <td>
+                    <div class="certainCategory">
+                        <p><a href=""><img src="{% static 'categories/internet.png' %}" alt="internet" style="width:100px; height:100px;"></a></p>
+                        <a href="">internet</a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="certainCategory">
+                        <p><a href=""><img src="{% static 'categories/food.png' %}" alt="food" style="width:100px; height:100px;"></a></p>
+                        <a href="">food</a>
+                    </div>
+                </td>
+                <td>
+                    <div class="certainCategory">
+                        <p><a href=""><img src="{% static 'categories/sport.jpg' %}" alt="sport" style="width:100px; height:100px;"></a></p>
+                        <a href="">sport</a>
+                    </div>
+                </td>
+                <td>
+                    <div class="certainCategory">
+                        <p><a href=""><img src="{% static 'categories/fashion.png' %}" alt="fashion" style="width:100px; height:100px;"></a></p>
+                        <a href="">fashion</a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="certainCategory">
+                        <p><a href=""><img src="{% static 'categories/trend.png' %}" alt="trend" style="width:100px; height:100px;"></a></p>
+                        <a href="">trend</a>
+                    </div>
+                </td>
+                <td>
+                    <div class="certainCategory">
+                        <p><a href=""><img src="{% static 'categories/technology.png' %}" alt="technology" style="width:100px; height:100px;"></a></p>
+                        <a href="">technology</a>
+                    </div>
+                </td>
+                <td>
+                    <div class="certainCategory">
+                        <p><a href=""><img src="{% static 'categories/computer.png' %}" alt="computer" style="width:100px; height:100px;"></a></p>
+                        <a href="">computer</a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="certainCategory">
+                        <p><a href=""><img src="{% static 'categories/cars.jpg' %}" alt="cars" style="width:100px; height:100px;"></a></p>
+                        <a href="">cars</a>
+                    </div>
+                </td>
+                <td>
+                    <div class="certainCategory">
+                        <p><a href=""><img src="{% static 'categories/fun.png' %}" alt="fun" style="width:100px; height:100px;"></a></p>
+                        <a href="">fun</a>
+                    </div>
+                </td>
+                <td>
+                    <div class="certainCategory">
+                        <p><a href=""><img src="{% static 'categories/misc.png' %}" alt="misc" style="width:100px; height:100px;"></a></p>
+                        <a href="">misc</a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+{% endblock %}
+
+{% block right_column %}
+	<h3><p>Latest questions</p></h3>
+		{% if all_questions_time %}
+			{% for question in all_questions_time %}
+				<!-- questions by time -->
+				<div class="questionWithAnswer">
+					<p><a href="{% url 'question' question.questionID %}"><span class="questionTitle">{{ question.title }}</span></a></p>
+					{% if question.answered == 1 %}
+						<div class="answeredIcon"><img src="{% static 'answered.png' %}" alt="answered" style="width:50px; height:50px;"></div>
+					{% endif %}
+					<div class="question">
+						<b>{{ question.body }}</b>
+						<div class="categories">Categories: {{ question.categories }}</div>
+					</div>
+
+				</div>
+			{% endfor %}
+		{% else %}
+			<h3>No questions yet in the database.</h3>
+		{% endif %}
+	</div>
+{% endblock %}
