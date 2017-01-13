@@ -20,19 +20,24 @@
                 <div class="votes">
                     <table class="votesTable">
                         <tr>
-                            <td><input type="image" src="{% static 'question/upvote.png' %}" alt="upvote" style="width:50px; height:30px"/></td>
+                            <td>
+                                <form action="{% url 'upvote' question.questionID answer.pk  %}" method="post">
+                                    {% csrf_token %}
+                                    <input type="image" src="{% static 'question/upvote.png' %}" alt="upvote" style="width:50px; height:30px"/>
+                                </form>
+                            </td>
                         </tr>
                         <tr>
                             <td><div id="averageVotes1"><b>{{ answer.average_votes }}</b></div></td>
                         </tr>
                         <tr>
-                            <td><input type="image" src="{% static 'question/downvote.png' %}" alt="downvote" style="width:50px; height:30px"/></td>
+                            <td>
+                                <form action="{% url 'downvote' question.questionID answer.pk  %}" method="post">
+                                    {% csrf_token %}
+                                    <input type="image" src="{% static 'question/downvote.png' %}" alt="downvote" style="width:50px; height:30px"/>
+                                </form>
+                            </td>
                         </tr>
-                        {% if question.answered == 1 %}
-                            <tr>
-                                <td><div class="answeredIcon"><img src="{% static 'answered.png' %}" alt="answered" style="width:50px; height:50px;"></div></td>
-                            </tr>
-                        {% endif %}
                     </table>
                 </div>
                 <div class="answer">
@@ -43,15 +48,17 @@
         {% endfor %}
     {% endif %}
 
-    <!-- Answer the question -->
-    <div class="answer">
-        <p>Answer the question</p>
-        Name:
-        <input type="text" name="firstname"><br>
-        Answer:
-        <textarea class="textarea"></textarea>
-        <input type="submit" value="Answer" style="float: right;">
-    </div>
+    {% if user.is_authenticated %}
+        <!-- Answer the question -->
+        <div class="answer">
+            <form name="answerQuestion" action="{% url 'answerquestion' question.questionID %}" method="post">
+                {% csrf_token %}
+                <label>Answer:</label>
+                <textarea name="answerBody" class="textarea"></textarea>
+                <input type="submit" value="Answer">
+            </form>
+        </div>
+    {% endif %}
 {% endblock %}
 
 {% block right_column %}

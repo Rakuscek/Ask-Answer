@@ -6,11 +6,13 @@
 {% endblock %}
 
 {% block ask_button %}
-	<div class="askbtnbar"><a class="askbtn" href="{% url 'ask' %}">Ask a question</a></div>
+	{% if user.is_authenticated %}
+		<div class="askbtnbar"><a class="askbtn" href="{% url 'ask' %}">Ask a question</a></div>
+	{% endif %}
 {% endblock %}
 
 {% block left_column %}
-	<h2>Most popular questions</h2>
+	<h2>All questions</h2>
 		{% if all_questions %}
 			{% for question in all_questions %}
 				<!-- questions by popularity -->
@@ -23,7 +25,6 @@
 						<b>{{ question.body }}</b>
 						<div class="categories">Categories: {{ question.categories }}</div>
 					</div>
-
 				</div>
 			{% endfor %}
 		{% else %}

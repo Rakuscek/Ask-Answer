@@ -7,7 +7,7 @@ from django.core.urlresolvers import reverse
 from datetime import datetime
 
 class Question(models.Model):
-    questionID = models.IntegerField(primary_key=True)
+    questionID = models.AutoField(primary_key=True)
     title = models.CharField(max_length=200)
     body = models.CharField(max_length=1000)
     time = models.DateTimeField(default=datetime.now)

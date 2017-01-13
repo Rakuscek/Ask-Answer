@@ -25,62 +25,72 @@
 							<input id="submit" type="submit" value="Search">
 						</form>
 					</li>
-					<li class="navLI-right"><button class="navLIA logRegBtn" onclick="document.getElementById('loginwindow').style.display='block'">Log in</button></li>
-					<li class="navLI-right"><button class="navLIA logRegBtn" onclick="document.getElementById('registerwindow').style.display='block'">Register</button></li>
+					{% if user.is_authenticated %}
+						<li class="navLI-right">
+							<form name="logoutuser" action="{% url 'logoutuser' %}" method="post">
+								{% csrf_token %}
+								<button type="submit" class="navLIA logRegBtn">Log out</button>
+							</form>
+						</li>
+						<li class="navLI-right"><button class="navLIA logRegBtn" disabled>You are logged in as {{ user.username }}</button></li>
+					{% else %}
+						<li class="navLI-right"><button class="navLIA logRegBtn" onclick="document.getElementById('loginwindow').style.display='block'">Log in</button></li>
+						<li class="navLI-right"><button class="navLIA logRegBtn" onclick="document.getElementById('registerwindow').style.display='block'">Register</button></li>
+					{% endif %}
 				</ul>
 			</div>
 		</header>
 
 		<!-- LOGIN -->
 		<div id="loginwindow" class="modal">
-			<form class="modal-content">
+			<div class="modal-content">
 				<div class="imgcontainer">
 					<span onclick="document.getElementById('loginwindow').style.display='none'" class="close" title="Close Modal">&times;</span>
 					<img src="{% static 'loginpic.png' %}" alt="Avatar" class="avatar">
 				</div>
 				<div class="container">
-					<label><b>Username</b></label>
-					<input type="text" placeholder="Enter Username" id="usernameLogin" required>
+					<form name=loginForm" action="{% url 'loginuser' %}" method="post">
+						{% csrf_token %}
+						<label><b>Username</b></label>
+						<input type="text" name="usernameLogin" placeholder="Enter Username" id="usernameLogin" required/>
 
-					<label><b>Password</b></label>
-					<input type="password" placeholder="Enter Password" id="passwordLogin" required>
+						<label><b>Password</b></label>
+						<input type="password" name="passwordLogin" placeholder="Enter Password" id="passwordLogin" required/>
 
-					<button type="submit" class="acceptbtn" onclick="loginValidation()">Login</button>
-
-					<input type="checkbox" checked="checked"> Remember me
-				</div>
-				<div class="container" style="background-color:#f1f1f1">
+						<button type="submit" class="acceptbtn" onclick="loginValidation()">Login</button>
+					</form>
 					<button type="button" onclick="document.getElementById('loginwindow').style.display='none'" class="cancelbtn">Cancel</button>
 				</div>
-			</form>
+			</div>
 		</div>
 
 		<!-- REGISTER -->
 		<div id="registerwindow" class="modal">
-			<form class="modal-content">
+			<div class="modal-content">
 				<div class="imgcontainer">
 					<span onclick="document.getElementById('registerwindow').style.display='none'" class="close" title="Close Modal">&times;</span>
 					<img src="{% static 'loginpic.png' %}" alt="Avatar" class="avatar">
 				</div>
 				<div class="container">
-					<label><b>Username</b></label>
-					<input type="text" placeholder="Enter Username" id="usernameRegister" required>
+					<form name="registerForm" action="{% url 'registeruser' %}" method="post">
+						{% csrf_token %}
+						<label><b>Username</b></label>
+						<input type="text" name="usernameRegister" placeholder="Enter Username" id="usernameRegister" required/>
 
-					<label><b>E-mail</b></label>
-					<input type="text" placeholder="Enter E-mail" id="email" required>
+						<label><b>E-mail</b></label>
+						<input type="text" name="email" placeholder="Enter E-mail" id="email" required/>
 
-					<label><b>Password</b></label>
-					<input type="password" placeholder="Enter Password" id="passwordRegister1" required>
+						<label><b>Password</b></label>
+						<input type="password" name="passwordRegister1" placeholder="Enter Password" id="passwordRegister1" required/>
 
-					<label><b>Repeat Password</b></label>
-					<input type="password" placeholder="Enter Password Again" id="passwordRegister2" required>
+						<label><b>Repeat Password</b></label>
+						<input type="password" name="passwordRegister2" placeholder="Enter Password Again" id="passwordRegister2" required/>
 
-					<button type="button" class="acceptbtn" onclick="registrationValidation()">Register</button>
-				</div>
-				<div class="container" style="background-color:#f1f1f1">
+						<button type="submit" class="acceptbtn" onclick="registrationValidation()">Register</button>
+					</form>
 					<button type="button" onclick="document.getElementById('registerwindow').style.display='none'" class="cancelbtn">Cancel</button>
 				</div>
-			</form>
+			</div>
 		</div>
 
 		<!-- main body of website -->

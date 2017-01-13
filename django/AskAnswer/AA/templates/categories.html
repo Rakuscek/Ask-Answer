@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block css_import %}
+	<link rel="stylesheet" type="text/css" href="{% static 'categories/styleCategories.css' %}">
+{% endblock %}
+
 {% block left_column %}
     <h2><p>Categories</p></h2>
     <div class="questionWithAnswer">

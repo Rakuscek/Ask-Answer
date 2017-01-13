@@ -12,17 +12,14 @@ function registrationValidation() {
 		document.getElementById("email").style.background = "none";
 		emailCorrect = true;
 	}
-	
-	if(pass1 != pass2) {
+
+	if(pass1 != pass2 || pass1 == "" || pass2 == "") {
 		document.getElementById("passwordRegister1").style.background = "#B64747";
 		document.getElementById("passwordRegister2").style.background = "#B64747";
 	} else {
 		document.getElementById("passwordRegister1").style.background = "none";
 		document.getElementById("passwordRegister2").style.background = "none";
 		passwordsCorrect = true;
-	}
-	if(emailCorrect && passwordsCorrect){
-		document.getElementById('registerwindow').style.display='none';
 	}
 }
 
