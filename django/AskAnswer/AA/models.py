@@ -1,10 +1,11 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from django.utils import timezone
 from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
 
-from datetime import datetime
+from datetime import datetime, timedelta
 
 class Question(models.Model):
     questionID = models.AutoField(primary_key=True)
@@ -17,6 +18,11 @@ class Question(models.Model):
 
     def get_absolute_url(self):
         return reverse('question', kwargs={'pk': self.pk})
+
+    def is_recent(self):
+        if self.time + timedelta(hours=2) >= timezone.now():
+            return True
+        return False
 
     def __str__(self):
         return self.title + ' - ' + str(self.username)

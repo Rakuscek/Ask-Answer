@@ -2,11 +2,11 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.models import User
 from django.http import *
 from django.contrib.auth import authenticate, login, logout
-import datetime
 
 from .models import Question, Answer
 
 
+#home page view
 def index(request):
     all_questions = Question.objects.all()
     all_questions_time = all_questions.order_by('-time')[:3]
@@ -17,6 +17,7 @@ def index(request):
     return render(request, 'home.html', context)
 
 
+#question page view
 def question(request, question_id):
     cer_question = get_object_or_404(Question, pk=question_id)
 
@@ -30,6 +31,7 @@ def question(request, question_id):
     return render(request, 'question.html', context)
 
 
+#about page view
 def about(request):
     all_questions_time = Question.objects.all().order_by('-time')[:3]
     context = {
@@ -38,6 +40,7 @@ def about(request):
     return render(request, 'about.html', context)
 
 
+#category page view
 def category(request):
     all_questions_time = Question.objects.all().order_by('-time')[:3]
     context = {
@@ -46,6 +49,7 @@ def category(request):
     return render(request, 'categories.html', context)
 
 
+#ask page view
 def ask(request):
     all_questions_time = Question.objects.all().order_by('-time')[:3]
     context = {
@@ -54,6 +58,9 @@ def ask(request):
     return render(request, 'ask.html', context)
 
 
+#view that registers user
+#it checks if passwords given are the same
+#if passwords are the same it creates a new user and logs him in
 def registeruser(request):
     if request.POST:
         username = request.POST['usernameRegister']
@@ -68,6 +75,7 @@ def registeruser(request):
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
 
+#view to log the user in after authenticating
 def loginuser(request):
     if request.POST:
         username = request.POST['usernameLogin']
@@ -78,11 +86,15 @@ def loginuser(request):
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
 
+#view to log the user out
 def logoutuser(request):
     logout(request)
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
 
+#view to post a new question
+#it creates a new questions with the data given
+#then it redirects the user to the question page
 def askquestion(request):
     categories = ''
     at_least_one = False
@@ -221,6 +233,7 @@ def askquestion(request):
         return render(request, 'question.html', context)
 
 
+#view that creates a new answer to specific question
 def answerquestion(request, question_id):
     if request.POST:
         question = Question.objects.get(pk=question_id)
@@ -234,7 +247,8 @@ def answerquestion(request, question_id):
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
 
-def upvote(request, answer_id, question_id):
+#view that increments number of plusVotes for specific question in the database
+def upvote(request, answer_id):
     if request.POST:
         answer = Answer.objects.get(pk=answer_id)
         answer.plusVotes += 1
@@ -242,7 +256,8 @@ def upvote(request, answer_id, question_id):
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
 
-def downvote(request, answer_id, question_id):
+#view that decrements number of plusVotes for specific question in the database
+def downvote(request, answer_id):
     if request.POST:
         answer = Answer.objects.get(pk=answer_id)
         answer.plusVotes -= 1
