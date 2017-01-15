@@ -19,12 +19,6 @@
 					<li class="navLI"><a class="navLIA" href="{% url 'index' %}">Home</a></li>
 					<li class="navLI"><a class="navLIA" href="{% url 'about' %}">About</a></li>
 					<li class="navLI"><a class="navLIA" href="{% url 'category' %}">Categories</a></li>
-					<li class="navLI">
-						<form id="searchbox">
-							<input id="search" type="search" placeholder="Search...">
-							<input id="submit" type="submit" value="Search">
-						</form>
-					</li>
 					{% if user.is_authenticated %}
 						<li class="navLI-right">
 							<form name="logoutuser" action="{% url 'logoutuser' %}" method="post">
